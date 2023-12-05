@@ -43,7 +43,7 @@ function validateInfo() {
 
     // Checking if passwords match
     if (document.getElementById('password').value != document.getElementById('confirm_password').value) {
-        errorMes += "Passwords need to match.\n";
+        errorMes += "Password needs to match confirm password.\n";
         correct = false;
     }
 
