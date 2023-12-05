@@ -6,11 +6,11 @@ function validateInfo() {
     const last_name_validation = DOMPurify.sanitize(document.getElementById('last_name').value);
     const email_validation = DOMPurify.sanitize(document.getElementById('email').value);
 
-    if (document.getElementById('first_name_validation').value == "") {
+    if (first_name_validation == "") {
         errorMes += "Please enter your first name.\n";
         correct = false;
     }
-    if (document.getElementById('last_name_validation').value == "") {
+    if (last_name_validation == "") {
         errorMes += "Please enter your last name.\n";
         correct = false;
     }
@@ -57,4 +57,3 @@ function validateInfo() {
 
     return correct;
 }
-
