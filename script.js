@@ -3,9 +3,9 @@ function validateInfo() {
     let correct = true;
     let errorMes = "";
     
-    const firstName = DOMPurify.sanitize(document.getElementById('first_name').value);
-    const lastName = DOMPurify.sanitize(document.getElementById('last_name').value);
-    const email = DOMPurify.sanitize(document.getElementById('email').value);
+    const first_name_validation = DOMPurify.sanitize(document.getElementById('first_name').value);
+    const last_name_validation = DOMPurify.sanitize(document.getElementById('last_name').value);
+    const email_validation = DOMPurify.sanitize(document.getElementById('email').value);
 
     if (document.getElementById('first_name').value == "") {
         errorMes += "Please enter your first name.\n";
