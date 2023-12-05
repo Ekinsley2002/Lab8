@@ -7,11 +7,11 @@ function validateInfo() {
     const last_name_validation = DOMPurify.sanitize(document.getElementById('last_name').value);
     const email_validation = DOMPurify.sanitize(document.getElementById('email').value);
 
-    if (document.getElementById('first_name').value == "") {
+    if (document.getElementById('first_name_validation').value == "") {
         errorMes += "Please enter your first name.\n";
         correct = false;
     }
-    if (document.getElementById('last_name').value == "") {
+    if (document.getElementById('last_name_validation').value == "") {
         errorMes += "Please enter your last name.\n";
         correct = false;
     }
@@ -21,7 +21,7 @@ function validateInfo() {
         correct = false;
     }
 
-    if (document.getElementById('email').value == "") {
+    if (document.getElementById('email_validation').value == "") {
         errorMes += "Please enter your email.\n";
         correct = false;
     
@@ -34,7 +34,7 @@ function validateInfo() {
     
 
     // Validating email format
-    var email = document.getElementById('email').value;
+    var email = document.getElementById('email_validation').value;
         
     var emailIndex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
         
