@@ -1,31 +1,33 @@
 function validateInfo() {
+    
     let correct = true;
-    let errorMessage = "";
+    
+    let errorMes = "";
 
 
     if (document.getElementById('first_name').value == "") {
-        errorMessage += "Please enter your first name.\n";
-        isValid = false;
+        errorMes += "Please enter your first name.\n";
+        correct = false;
     }
     if (document.getElementById('last_name').value == "") {
-        errorMessage += "Please enter your last name.\n";
-        isValid = false;
+        errorMes += "Please enter your last name.\n";
+        correct = false;
     }
 
     if (document.getElementById('confirm_password').value == "") {
-        errorMessage += "Please confirm your password.\n";
-        isValid = false;
+        errorMes += "Please confirm your password.\n";
+        correct = false;
     }
 
     if (document.getElementById('email').value == "") {
-        errorMessage += "Please enter your email.\n";
-        isValid = false;
-        
+        errorMes += "Please enter your email.\n";
+        correct = false;
+    
     }
         
     if (document.getElementById('password').value == "") {
-        errorMessage += "Password is required.\n";
-        isValid = false;
+        errorMes += "Password is required.\n";
+        correct = false;
     }
     
 
@@ -35,13 +37,13 @@ function validateInfo() {
     var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
         
     if (email && !emailRegex.test(email)) {
-        errorMessage += "Invalid email.\n";
+        errorMes += "Invalid email.\n";
         correct = false;
     }
 
     // Checking if passwords match
     if (document.getElementById('password').value != document.getElementById('confirm_password').value) {
-        errorMessage += "Passwords do not match.\n";
+        errorMes += "Passwords do not match.\n";
         correct = false;
     }
 
