@@ -34,9 +34,9 @@ function validateInfo() {
     // Validating email format
     var email = document.getElementById('email').value;
         
-    var emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    var emailIndex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
         
-    if (email && !emailRegex.test(email)) {
+    if (email && !emailIndex.test(email)) {
         errorMes += "Invalid email.\n";
         correct = false;
     }
