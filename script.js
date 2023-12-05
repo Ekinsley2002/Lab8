@@ -5,7 +5,7 @@ function validateInfo() {
     
     const first_name_validation = DOMPurify.sanitize(document.getElementById('first_name').value);
     const last_name_validation = DOMPurify.sanitize(document.getElementById('last_name').value);
-    const email_validation = DOMPurify.sanitize(document.getElementById('email').value);
+    const email_validation = DOMPurify.sanitize(document.getElementById('email_validation').value);
 
     if (document.getElementById('first_name_validation').value == "") {
         errorMes += "Please enter your first name.\n";
@@ -34,7 +34,7 @@ function validateInfo() {
     
 
     // Validating email format
-    var email = document.getElementById('email_validation').value;
+    var email = document.getElementById('email').value;
         
     var emailIndex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
         
