@@ -1,4 +1,5 @@
 function validateInfo() {
+    console.log("validateInfo function called");
     let correct = true;
     let errorMes = "";
 
