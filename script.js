@@ -49,7 +49,7 @@ function validateInfo() {
 
     // Display error message or success message
     if (!correct) {
-        alert("Please correct the following errors:\n" + errorMessage);
+        alert("Please correct the following errors:\n" + errorMes);
     } 
         
     else {
