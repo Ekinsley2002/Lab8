@@ -1,8 +1,8 @@
 function validateInfo() {
-    let isValid = true;
+    let correct = true;
     let errorMessage = "";
 
-    // Validating empty fields
+
     if (document.getElementById('first_name').value == "") {
         errorMessage += "Please enter your first name.\n";
         isValid = false;
@@ -10,7 +10,7 @@ function validateInfo() {
     if (document.getElementById('last_name').value == "") {
         errorMessage += "Please enter your last name.\n";
         isValid = false;
-    
+    }
 
     if (document.getElementById('confirm_password').value == "") {
         errorMessage += "Please confirm your password.\n";
@@ -36,17 +36,17 @@ function validateInfo() {
         
     if (email && !emailRegex.test(email)) {
         errorMessage += "Invalid email.\n";
-        isValid = false;
+        correct = false;
     }
 
     // Checking if passwords match
     if (document.getElementById('password').value != document.getElementById('confirm_password').value) {
         errorMessage += "Passwords do not match.\n";
-        isValid = false;
+        correct = false;
     }
 
     // Display error message or success message
-    if (!isValid) {
+    if (!correct) {
         alert("Please correct the following errors:\n" + errorMessage);
     } 
         
@@ -54,7 +54,7 @@ function validateInfo() {
         alert("All information is valid.");
     }
 
-    return isValid;
+    return correct;
         
 }
 
